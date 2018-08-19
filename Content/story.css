@@ -1,0 +1,38 @@
+﻿.story {
+    border: 2px solid black;
+    transition: 0.5s;
+}
+
+    .story:hover {
+        background-color: rgb(248,248,248);
+    }
+
+.studentportraits {
+    border: 2px solid black;
+    width: 200px;
+}
+
+.btn-ec {
+    color: white;
+    background-color: rgb(255,149,1);
+}
+
+    .btn-ec:hover {
+        color: black;
+        background-color: limegreen; /*TODO change hover colors*/
+    }
+
+.details {
+    position: relative;
+    height: 300px;
+}
+
+.detlist {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(10px);
+}
+
+.paragraph {
+    text-indent: 50px;
+}

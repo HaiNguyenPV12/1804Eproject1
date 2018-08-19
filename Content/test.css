@@ -1,0 +1,83 @@
+﻿body {
+}
+.abovenavbar {
+    height: 100px;
+    width: 100%;
+    background-image: url('../img/logo.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: whitesmoke; /*TODO change background color and font*/
+}
+
+.bannercontent {
+    height: 100px;
+    line-height: 100px;
+    font-family: sans-serif;
+    font-size: xx-large;
+    padding: 25px 0;
+}
+
+    .bannercontent a {
+        font-weight: bolder;
+        color: rgb(255,149,1);
+        text-decoration: none; /*TODO change font and color*/
+        text-shadow: -1px -1px 0.5px #000, 1px -1px 0.5px #000, -1px 1px 0.5px #000, 1px 1px 0.5px #000; /*outline*/
+    }
+
+        .bannercontent a:hover {
+            color: rgb(227,178,124); /*TODO change hover color*/
+            text-shadow: -1px -1px 0.5px #212C44, 1px -1px 0.5px #212C44, -1px 1px 0.5px #212C44, 1px 1px 0.5px #212C44; /*outline*/
+        }
+
+.dropdown-item:hover {
+    background-color: rgb(255,149,1);
+    color: white;
+}
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+    background-color: rgb(255,149,1);
+    color: white;
+    transition: 0.15s;
+}
+
+.footer {
+    background-color: rgba(25, 25, 25, 0.05);
+}
+
+    .footer a {
+        text-decoration: none;
+    }
+
+.modal-content {
+    background-color: rgb(241,139,1);
+    color: white;
+}
+
+.ScrollToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 30px;
+    background: #f5f5f5;
+    color: #444;
+    cursor: pointer;
+    border: 0;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+}
+
+    .ScrollToTop:hover {
+        background: #e9ebec;
+        transition: 0.2s;
+    }
+
+    .ScrollToTop.show {
+        opacity: 1;
+    }
