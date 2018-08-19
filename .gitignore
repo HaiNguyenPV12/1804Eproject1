@@ -335,5 +335,6 @@ ASALocalRun/
 *.zip
 
 # test specific
-test1.html
+test.html
+test2.html
 test*.html
