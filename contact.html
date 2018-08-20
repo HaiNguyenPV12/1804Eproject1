@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html ng-app="">
+<html ng-app="contact">
 <head>
     <meta charset="utf-8">
     <title>Contact Us</title>
@@ -61,19 +61,37 @@
                 </div>
                 <div class="row pb-2">
                     <div class="col-md-6 border">
-                        <form id="contact-form" class="form py-2" method="post">
-                            <p class="font-weight-bold">Name:<span class="form-required">*</span></p>
-                            <input name="name" type="text" class="form-control" placeholder="Your Name" required>
-                            <br />
-                            <p class="font-weight-bold">Email:<span class="form-required">*</span></p>
-                            <input name="email" type="email" class="form-control" placeholder="Your email" required>
-                            <br />
-                            <p class="font-weight-bold">Your comments:<span class="form-required">*</span></p>
-                            <textarea name="message" class="form-control" placeholder="What would you like to know more about us" rows="4" required></textarea>
-                            <p></p>
+                        <form id="ctForm" name="ctForm" class="form py-2" method="post" ng-submit="emFunc()">
 
+                            <p class="font-weight-bold">Name:<span class="form-required">*</span></p>
+                            <input name="ctName" ng-model="ctName" class="form-control" type="text" placeholder="Your Name" required>
+                            <span ng-cloak ng-show="ctForm.ctName.$touched && ctForm.ctName.$invalid" class="form-required">
+                                <span ng-show="ctForm.ctName.$error.required">Name is required</span>
+                            </span>
+
+                            <br />
+
+                            <p class="font-weight-bold">Email:<span class="form-required">*</span></p>
+                            <input name="ctEmail" type="email" class="form-control" placeholder="Your email" ng-model="ctEmail" required>
+                            <span ng-cloak ng-show="ctForm.ctEmail.$touched && ctForm.ctEmail.$invalid" class="form-required">
+                                <span ng-show="ctForm.ctEmail.$error.required">Email is required</span>
+                                <span ng-show="ctForm.ctEmail.$error.email">Invalid email address</span>
+                            </span>
+
+                            <br />
+
+                            <p class="font-weight-bold">Your comments:<span class="form-required">*</span></p>
+                            <textarea name="ctMessage" class="form-control" placeholder="What would you like to know more about us" rows="4" required ng-model="ctMessage"></textarea>
+                            <span ng-cloak ng-show="ctForm.ctMessage.$touched && ctForm.ctMessage.$invalid" class="form-required">
+                                <span ng-show="ctForm.ctMessage.$error.required">Message is required</span>
+                            </span>
+                            <p></p>
                             <div class="text-center">
-                                <button id="formsubmit" type="submit" class="btn btn-primary">Send message</button>
+                                <button id="formsubmit" type="submit" class="btn btn-primary" ng-disabled="ctForm.ctName.$touched && ctForm.ctName.$invalid ||
+                                        ctForm.ctEmail.$touched && ctForm.ctEmail.$invalid ||
+                                        ctForm.ctMessage.$touched && ctForm.ctMessage.$invalid">
+                                    Send message
+                                </button>
                                 &nbsp;
                                 <button type="reset" class="btn btn-danger">Cancel</button> <br />
                                 <div class="text-center font-weight-bold">OR</div>
@@ -95,8 +113,8 @@
                 <!-- Modal body -->
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <h1>Thank you for contacting us!</h1>
-                        <p>We will reply to your email at <span ng-cloak>{{ email }}</span> shortly.</p>
+                        <h1>Thank you for contacting us, {{contactname}}!</h1>
+                        <p>We will reply to your message at <span ng-cloak class="font-weight-bold">{{ contactemail }}</span> shortly.</p>
                     </div>
                 </div>
                 <!-- Modal footer -->
@@ -106,9 +124,6 @@
             </div>
         </div>
     </div>
-    <script>
-        var app = angular.module('test', []);
-    </script>
     <!--footer-->
     <div class="footer">
         <div class="container-fluid pt-md-3 text-md-center">
@@ -169,7 +184,6 @@
     <script src="Scripts/scripts.js"></script>
     <script src="Scripts/angular.min.js"></script>
     <!--controller-->
-    <script src="Scripts/Controllers/storycontroller.js"></script>
     <script src="Scripts/contact.js"></script>
 </body>
 </html>

@@ -21,7 +21,9 @@
     }
 });
 
-var app = angular.module("ecApp", ["ngRoute"]);
+//reserved for routing
+
+/*var app = angular.module("ecApp", ["ngRoute"]);
 app.config(function ($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
     $routeProvider
@@ -37,4 +39,4 @@ app.config(function ($routeProvider, $locationProvider) {
             controller: 'storycontroller'
         });
     //.otherwise({ redirectTo: '/' });
-});
+});*/
