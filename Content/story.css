@@ -12,16 +12,6 @@
     width: 200px;
 }
 
-.btn-ec {
-    color: white;
-    background-color: rgb(255,149,1);
-}
-
-    .btn-ec:hover {
-        color: black;
-        background-color: limegreen; /*TODO change hover colors*/
-    }
-
 .details {
     position: relative;
     height: 300px;

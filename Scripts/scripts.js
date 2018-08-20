@@ -35,6 +35,6 @@ app.config(function ($routeProvider, $locationProvider) {
         .when('/story', {
             templateUrl: 'story.html',
             controller: 'storycontroller'
-        })
+        });
     //.otherwise({ redirectTo: '/' });
 });

@@ -1,16 +1,16 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<!doctype html>
+<html ng-app="">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>Contact Us</title>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/font-awesome.min.css" rel="stylesheet" />
     <link href="Content/bootstrap-social.css" rel="stylesheet" />
     <link href="Content/custom.css" rel="stylesheet" />
+    <link href="Content/contact.css" rel="stylesheet" />
     <link rel="icon" href="img/logofav.png" />
 </head>
-<body>
+<body ng-controller="contactcontroller">
     <div class="abovenavbar">
         <div class="bannercontent">
             <a href="index.html">ExcellentCoaching</a>
@@ -47,40 +47,68 @@
                 <a class="nav-link" href="contact.html">CONTACT US</a>
             </li>
         </ul>
-    </nav>
+    </nav><br>
+
     <!--Content-->
     <div class="container">
         <div class="row">
-            <div class="col-lg-offset-3 col-xs-12 col-lg-6">
-                <div class="jumbotron">
-                    <div class="row text-center">
-                        <div class="text-center col-xs-12 col-sm-12 col-md-12 col-lg-12"> </div>
-                        <div class="text-center col-lg-12">
-                            <form role="form" id="feedbackForm" class="text-left">
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Name">
-                                    <span class="help-block" style="display: none;">Please enter your name.</span>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">E-Mail</label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
-                                    <span class="help-block" style="display: none;">Please enter a valid e-mail address.</span>
-                                </div>
-                                <div class="form-group">
-                                    <label for="message">Message</label>
-                                    <textarea rows="10" cols="100" class="form-control" id="message" name="message" placeholder="Message"></textarea>
-                                    <span class="help-block" style="display: none;">Please enter a message.</span>
-                                </div>
-                                <span class="help-block" style="display: none;">Please enter a the security code.</span>
-                                <button type="submit" id="feedbackSubmit" class="btn btn-primary btn-lg" style=" margin-top: 10px;"> Send</button>
-                            </form>
-                        </div>
+            <div class="col-md-12">
+                <div class="col-md-6 col-xl-6">
+                    <blockquote>
+                        <h1 class="h1 text-left">Say Hello</h1>
+                    </blockquote>
+                    <p class="p text-left">We are always ready to serve you!</p>
+                </div>
+                <div class="row pb-2">
+                    <div class="col-md-6 border">
+                        <form id="contact-form" class="form py-2" method="post">
+                            <p class="font-weight-bold">Name:<span class="form-required">*</span></p>
+                            <input name="name" type="text" class="form-control" placeholder="Your Name" required>
+                            <br />
+                            <p class="font-weight-bold">Email:<span class="form-required">*</span></p>
+                            <input name="email" type="email" class="form-control" placeholder="Your email" required>
+                            <br />
+                            <p class="font-weight-bold">Your comments:<span class="form-required">*</span></p>
+                            <textarea name="message" class="form-control" placeholder="What would you like to know more about us" rows="4" required></textarea>
+                            <p></p>
+
+                            <div class="text-center">
+                                <button id="formsubmit" type="submit" class="btn btn-primary">Send message</button>
+                                &nbsp;
+                                <button type="reset" class="btn btn-danger">Cancel</button> <br />
+                                <div class="text-center font-weight-bold">OR</div>
+                                <a href="mailto:contacts@excellent.edu" class="btn btn-light btn-lg rounded btn-ec">&nbsp;&nbsp;&nbsp;Send us an email&nbsp;&nbsp;&nbsp;</a><br>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <iframe class="ifr" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.321038152839!2d106.66424331527466!3d10.786705261952378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed2392c44df%3A0xd2ecb62e0d050fe9!2sFPT-Aptech+Computer+Education+HCM!5e0!3m2!1sen!2sus!4v1533999304150" align="bottom" width="500" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!--contact modal-->
+    <div class="modal fade" id="ctModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <h1>Thank you for contacting us!</h1>
+                        <p>We will reply to your email at <span ng-cloak>{{ email }}</span> shortly.</p>
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer text-center">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var app = angular.module('test', []);
+    </script>
     <!--footer-->
     <div class="footer">
         <div class="container-fluid pt-md-3 text-md-center">
@@ -133,9 +161,15 @@
             <a class="btn btn-light disabled" aria-disabled="true">&copy; Excellent Coaching Educations</a>
         </div>
     </div>
+    <a href="#" class="ScrollToTop" title="Back to top"><i class="fa fa-arrow-up"></i></a>
     <!--Scripts placed at end of document to make pages load faster-->
     <script src="Scripts/jquery-3.3.1.min.js"></script>
     <script src="Scripts/umd/popper.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/scripts.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <!--controller-->
+    <script src="Scripts/Controllers/storycontroller.js"></script>
+    <script src="Scripts/contact.js"></script>
 </body>
 </html>
