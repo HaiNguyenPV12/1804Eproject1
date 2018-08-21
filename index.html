@@ -8,15 +8,16 @@
     <link href="Content/font-awesome.min.css" rel="stylesheet" />
     <link href="Content/bootstrap-social.css" rel="stylesheet" />
     <link href="Content/custom.css" rel="stylesheet" />
+    <link rel="icon" href="img/logofav.png" />
 </head>
 <body>
-	<!--LOGO-->
+    <!--LOGO-->
     <div class="abovenavbar">
         <div class="bannercontent">
             <a href="index.html">ExcellentCoaching</a>
         </div>
     </div>
-    
+
     <!--navbar-->
     <nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-center sticky-top shadow">
         <ul class="navbar-nav">
@@ -49,45 +50,54 @@
             </li>
         </ul>
     </nav>
-   
-    
+
+
     <!--Content-->
     <div class="container">
-    <div id="demo" class="carousel slide" data-ride="carousel">
+        <div id="demo" class="carousel slide" data-ride="carousel">
 
-      <!-- Indicators -->
-      <ul class="carousel-indicators">
-        <li data-target="#demo" data-slide-to="0" class="active"></li>
-        <li data-target="#demo" data-slide-to="1"></li>
-        <li data-target="#demo" data-slide-to="2"></li>
-      </ul>
-      
-      <!-- The slideshow -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="img/img01.png" alt="" width="1100" height="500">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/img01.png" alt="" width="1100" height="500">
+                    <div class="carousel-caption" id="carousel-1">
+                        <h3>Over 10 years of experience</h3>
+                        <p>Our institution have been in the business for over a decade.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/img02.png" alt="" width="1100" height="500">
+                    <div class="carousel-caption">
+                        <h3>State of the art equipments</h3>
+                        <p>Modern and up to date amenities to maximize student productivity.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/img03.png" alt="" width="1100" height="500">
+                    <div class="carousel-caption">
+                        <h3>Offers only the best in the business</h3>
+                        <p>We'll only offer you the most qualified individuals for your education.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
         </div>
-        <div class="carousel-item">
-          <img src="img/img02.png" alt="" width="1100" height="500">
-        </div>
-        <div class="carousel-item">
-          <img src="img/img03.png" alt="" width="1100" height="500">
-        </div>
-      </div>
-      
-      <!-- Left and right controls -->
-      <a class="carousel-control-prev" href="#demo" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </a>
-      <a class="carousel-control-next" href="#demo" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </a>
     </div>
-    </div>
-    
-    <!--TODO change carousel button color-->
-    <!--TODO add carousel caption-->
-    
+
     <!--footer-->
     <div class="footer">
         <div class="container-fluid pt-md-3 text-md-center">
@@ -96,7 +106,7 @@
             <a class="btn btn-social-icon btn-lg btn-twitter" href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
             <a class="btn btn-social-icon btn-lg btn-google" href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a>
         </div>
-        <hr />
+        <hr class="py-1" />
         <div class="container-fluid text-center">
             Excellent Coacing Educations &bull; 9999 10th Ave E, Seatle, WA 99999
             &bull;
@@ -131,7 +141,7 @@
             &bull;
             <a href="tel:+1-555-555-5555">Support (555) 555 5555</a>
         </div>
-        <hr />
+        <hr class="py-1" />
         <div class="container-fluid text-center">
             <a href="privacy.html" class="btn btn-light">Privacy Policy</a>
             &nbsp; &bull; &nbsp;
@@ -140,9 +150,11 @@
             <a class="btn btn-light disabled" aria-disabled="true">&copy; Excellent Coaching Educations</a>
         </div>
     </div>
+    <a href="#" class="ScrollToTop" title="Back to top"><i class="fa fa-arrow-up"></i></a>
     <!--Scripts placed at end of document to make pages load faster-->
     <script src="Scripts/jquery-3.3.1.min.js"></script>
     <script src="Scripts/umd/popper.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/scripts.js"></script>
 </body>
 </html>

@@ -51,19 +51,22 @@
 
     <!--Content-->
     <div class="container">
+        <div class="row container-fluid">
+            <div class="col-md-6">
+                <h1>Say Hello</h1>
+                <p class="p text-left">We are always ready to serve you!</p>
+            </div>
+            <div class="col-md-6 text-md-right">
+                <a href="mailto:contacts@excellent.edu" class="btn btn-light btn-lg rounded btn-ec">Send us an email</a>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="col-md-6 col-xl-6">
-                    <blockquote>
-                        <h1 class="h1 text-left">Say Hello</h1>
-                    </blockquote>
-                    <p class="p text-left">We are always ready to serve you!</p>
-                </div>
                 <div class="row pb-2">
                     <div class="col-md-6 border">
                         <form id="ctForm" name="ctForm" class="form py-2" method="post" ng-submit="emFunc()">
 
-                            <p class="font-weight-bold">Name:<span class="form-required">*</span></p>
+                            <p class="font-weight-bold align-content-lg-center">Name:<span class="form-required">*</span></p>
                             <input name="ctName" ng-model="ctName" class="form-control" type="text" placeholder="Your Name" required>
                             <span ng-cloak ng-show="ctForm.ctName.$touched && ctForm.ctName.$invalid" class="form-required">
                                 <span ng-show="ctForm.ctName.$error.required">Name is required</span>
@@ -87,15 +90,15 @@
                             </span>
                             <p></p>
                             <div class="text-center">
-                                <button id="formsubmit" type="submit" class="btn btn-primary" ng-disabled="ctForm.ctName.$touched && ctForm.ctName.$invalid ||
+                                <div class="btn-group btn-group-justified">
+                                    <button id="formsubmit" type="submit" class="btn btn-group btn-ec" ng-disabled="ctForm.ctName.$touched && ctForm.ctName.$invalid ||
                                         ctForm.ctEmail.$touched && ctForm.ctEmail.$invalid ||
                                         ctForm.ctMessage.$touched && ctForm.ctMessage.$invalid">
-                                    Send message
-                                </button>
-                                &nbsp;
-                                <button type="reset" class="btn btn-danger">Cancel</button> <br />
-                                <div class="text-center font-weight-bold">OR</div>
-                                <a href="mailto:contacts@excellent.edu" class="btn btn-light btn-lg rounded btn-ec">&nbsp;&nbsp;&nbsp;Send us an email&nbsp;&nbsp;&nbsp;</a><br>
+                                        Send message
+                                    </button>
+                                    &nbsp;
+                                    <button type="reset" class="btn btn-group btn-danger">Cancel</button> <br />
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -182,8 +185,8 @@
     <script src="Scripts/umd/popper.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/scripts.js"></script>
+    <!--page specific scripts-->
     <script src="Scripts/angular.min.js"></script>
-    <!--controller-->
     <script src="Scripts/contact.js"></script>
 </body>
 </html>
