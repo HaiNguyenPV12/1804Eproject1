@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="ecApp">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
@@ -26,16 +26,16 @@
             </li>
             <!-- Courses Dropdown -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">COURSES</a>
+                <a class="nav-link dropdown-toggle" href="" id="navbardrop" data-toggle="dropdown">COURSES</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="commerce.html">Commerce</a>
-                    <a class="dropdown-item" href="mathematic.html">Mathematics</a>
-                    <a class="dropdown-item" href="language.html">Languages</a>
+                    <a class="dropdown-item" href="#!commerce">Commerce</a>
+                    <a class="dropdown-item" href="#!mathematic">Mathematics</a>
+                    <a class="dropdown-item" href="#!language">Languages</a>
                 </div>
             </li>
             <!--Faculties dropdown-->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">FACULTIES</a>
+                <a class="nav-link dropdown-toggle" href="" id="navbardrop" data-toggle="dropdown">FACULTIES</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="faculty.html#commerce">Commerce</a>
                     <a class="dropdown-item" href="faculty.html#mathematics">Mathematics</a>
@@ -43,61 +43,15 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="story.html">SUCCESS STORIES</a>
+                <a class="nav-link" href="#!story">SUCCESS STORIES</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contact.html">CONTACT US</a>
+                <a class="nav-link" href="#!test2">CONTACT US</a>
             </li>
         </ul>
     </nav>
-
-
     <!--Content-->
-    <div class="container">
-        <div id="demo" class="carousel slide" data-ride="carousel">
-
-            <!-- Indicators -->
-            <ul class="carousel-indicators">
-                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>
-            </ul>
-
-            <!-- The slideshow -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/img01.png" alt="" width="1100" height="500">
-                    <div class="carousel-caption" id="carousel-1">
-                        <h3>Over 10 years of experience</h3>
-                        <p>Our institution have been in the business for over a decade.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/img02.png" alt="" width="1100" height="500">
-                    <div class="carousel-caption">
-                        <h3>State of the art equipments</h3>
-                        <p>Modern and up to date amenities to maximize student productivity.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/img03.png" alt="" width="1100" height="500">
-                    <div class="carousel-caption">
-                        <h3>Offers only the best in the business</h3>
-                        <p>We'll only offer you the most qualified individuals for your education.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Left and right controls -->
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
-        </div>
-    </div>
-
+    <div ng-view></div>
     <!--footer-->
     <div class="footer">
         <div class="container-fluid pt-md-3 text-md-center">
@@ -111,7 +65,7 @@
             Excellent Coacing Educations &bull; 9999 10th Ave E, Seatle, WA 99999
             &bull;
             <!-- Button to Open the Modal -->
-            <a href="#" data-toggle="modal" data-target="#myModal">Map</a>
+            <a href="" data-toggle="modal" data-target="#myModal">Map</a>
             <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                 Map
             </button>-->
@@ -152,9 +106,17 @@
     </div>
     <a href="#" class="ScrollToTop" title="Back to top"><i class="fa fa-arrow-up"></i></a>
     <!--Scripts placed at end of document to make pages load faster-->
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.js"></script>
     <script src="Scripts/jquery-3.3.1.min.js"></script>
     <script src="Scripts/umd/popper.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/scripts.js"></script>
+    <!--Angular Controllers-->
+    <script src="Scripts/Controllers/indexcontroller.js"></script>
+    <script src="Scripts/Controllers/homecontroller.js"></script>
+    <script src="Scripts/Controllers/coursescontroller.js"></script>
+    <!--<script src="Scripts/Controllers/testcontroller.js"></script>-->
+
 </body>
 </html>
