@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
-    <title>Excellent Coaching</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EC > Commerce</title>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/font-awesome.min.css" rel="stylesheet" />
     <link href="Content/bootstrap-social.css" rel="stylesheet" />
@@ -49,9 +49,31 @@
         </ul>
     </nav>
     <!--Content-->
-    <br>
+
     <div class="container">
         <h2 align="center">Commerce</h2><br>
+
+        <!--TOC-->
+        <div class="border col-md-3">
+            <div class="row">
+                <b class="col-9">Contents</b>
+                <span class="col-2 px-1"><a href="#" id="toctoggle">[hide]</a></span>
+            </div>
+            <div class="container-fluid" id="toccontents">
+                <ul>
+                    <li><a href="#info">Information</a></li>
+                    <li><a href="#structure">Course Structure</a></li>
+                    <li><a href="#teacher">Teachers</a></li>
+                    <li><a href="#fee">Fee</a></li>
+                    <li><a href="#download">Downloads</a></li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <!--end of TOC-->
+        <div id="info"></div>
+        <br><br>
+
         <h4>Information</h4>
         <div class="container">
             <p>Commerce is one of the educational streams with unlimited career opportunities. Our Commerce Coaching Classes can be availed for all Commerce subjects including Accounts, Economics, Business Studies, etc.</p>
@@ -59,13 +81,15 @@
                 The expert tutors of Excellent Coaching Commerce Classes carry experience of over 10 years in commerce coaching. The aim is producing 100% results. The modern day methods of teachings have been incorporated to make the learning experience better. Excellent Coaching Commerce Classes do not consider coaching a business, but a service of students. Every student is equally important. No new topic is started without understanding the previous topic by each and every student.
             </p>
         </div>
-        <br>
+        <div id="structure"></div>
+        <br><br>
+
         <h4>Course Structure</h4>
-        <div class="container">
-            <table class="table-bordered">
+        <div class="col-sm-6">
+            <table class="table table-bordered table-striped table-hover">
                 <tr>
-                    <td width="80">CM001</td>
-                    <td width="200">Accountancy</td>
+                    <td width="30%">CM001</td>
+                    <td width="40%">Accountancy</td>
                 </tr>
                 <tr>
                     <td>CM002</td>
@@ -87,25 +111,61 @@
         </div>
         <br>
 
+        <div id="teacher"></div>
+        <br><br>
+
         <h4>Teachers</h4>
         <div class="container">
+            <table class="table-bordered">
+                <tr>
+                    <td align="center">
+                        <img src="img/teach1.jpg" width="150" height="200"><br>
+                        <h6>Ms. Jessica Alba</h6>
+                        <p style="font-size:12px;font-style:italic">Ph.D in Commerce</p>
+                    </td>
+                    <td align="center">
+                        <img src="img/teach2.jpg" width="150" height="200"><br>
+                        <h6>Mr. Bruno Mars</h6>
+                        <p style="font-size:12px;font-style:italic">Ph.D in Commerce</p>
+                    </td>
+                    <td align="center">
+                        <img src="img/teach3.jpeg" width="150" height="200"><br>
+                        <h6>Mr. Alan Walker</h6>
+                        <p style="font-size:12px;font-style:italic">Ph.D in Commerce</p>
+                    </td>
+                </tr>
+            </table>
 
         </div>
         <br>
+
+        <div id="fee"></div>
+        <br><br>
 
         <h4>Fee</h4>
-        <div class="container">
-            <p>Per subject: $3,150 </p>
-            <p>All: $15,750</p>
+        <div class="col-sm-6">
+            <table class="table table-striped table-hover table-bordered">
+                <tr>
+                    <td width="30%">Per subject:</td>
+                    <td width="40%">$3,150</td>
+                </tr>
+                <tr>
+                    <td>All:</td>
+                    <td> $15,750</td>
+            </table>
         </div>
         <br>
 
-        <h4>Course's infomation download</h4>
-        <div class="container">
-            <a href="Doc/commerce.docx">Download</a>
-        </div>
-    </div>
+        <div id="download"></div>
+        <br><br>
 
+        <h4>Download</h4>
+        <div class="container">
+            <a href="Doc/commerce.docx" class="btn btn-light btn-lg rounded btn-ec">Download Course Information</a>
+            <a href="Doc/price.docx" class="btn btn-light btn-lg rounded btn-ec">Download All Pricelist</a>
+        </div>
+        <br><br>
+    </div>
 
     <!--footer-->
     <div class="footer">
@@ -121,9 +181,6 @@
             &bull;
             <!-- Button to Open the Modal -->
             <a href="#" data-toggle="modal" data-target="#myModal">Map</a>
-            <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-                Map
-            </button>-->
             <!-- The Modal -->
             <div class="modal fade" id="myModal">
                 <div class="modal-dialog modal-lg">
@@ -159,9 +216,13 @@
             <a class="btn btn-light disabled" aria-disabled="true">&copy; Excellent Coaching Educations</a>
         </div>
     </div>
+    <a href="#" class="ScrollToTop" title="Back to top"><i class="fa fa-arrow-up"></i></a>
     <!--Scripts placed at end of document to make pages load faster-->
     <script src="Scripts/jquery-3.3.1.min.js"></script>
     <script src="Scripts/umd/popper.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/scripts.js"></script>
+    <!--page specific scripts-->
+    <script src="Scripts/courses.js"></script>
 </body>
 </html>
