@@ -21,6 +21,9 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'language.html',
             controller: 'languagescontroller'
         })
+        .when('/faculty', {
+            templateUrl: 'faculty.html'
+        })
         .when('/facultycommerce', {
             templateUrl: 'faculty.html',
             controller: 'fcommercecontroller'
