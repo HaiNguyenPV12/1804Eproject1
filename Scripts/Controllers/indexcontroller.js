@@ -3,11 +3,7 @@ app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when('/', {
             templateUrl: 'home.html',
-            controller:'homecontroller'
-        })
-        .when('/test2', {
-            templateUrl: 'test2.html',
-            controller: 'testcontroller'
+            controller: 'homecontroller'
         })
         .when('/story', {
             templateUrl: 'story.html',
@@ -15,9 +11,44 @@ app.config(['$routeProvider', function ($routeProvider) {
         })
         .when('/commerce', {
             templateUrl: 'commerce.html',
-            controller: 'coursescontroller'
+            controller: 'commercecontroller'
+        })
+        .when('/mathematic', {
+            templateUrl: 'mathematic.html',
+            controller: 'mathematiccontroller'
+        })
+        .when('/language', {
+            templateUrl: 'language.html',
+            controller: 'languagescontroller'
+        })
+        .when('/facultycommerce', {
+            templateUrl: 'faculty.html',
+            controller: 'fcommercecontroller'
+        })
+        .when('/facultymathematic', {
+            templateUrl: 'faculty.html',
+            controller:'fmathcontroller'
+        })
+        .when('/facultylanguages', {
+            templateUrl: 'faculty.html',
+            controller: 'flancontroller'
+        })
+        .when('/contact', {
+            templateUrl: 'contact.html',
+            controller: 'contactcontroller'
+        })
+        .when('/privacy', {
+            templateUrl: 'privacy.html',
+            controller: 'privacycontroller'
+        })
+        .when('/sitemap', {
+            templateUrl: 'sitemap.html',
+            controller: 'sitemapcontroller'
         });
-        //.otherwise({ redirectTo: '/' })
+    //.otherwise({ redirectTo: '/' })
+    //faculty.html#commerce
+    //faculty.html#mathematics
+    //faculty.html#languages
 }]);
 
 //app.controller('testcontroller', function ($scope) {
