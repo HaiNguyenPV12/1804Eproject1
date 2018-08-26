@@ -30,7 +30,7 @@ app.config(['$routeProvider', function ($routeProvider) {
         })
         .when('/facultymathematic', {
             templateUrl: 'faculty.html',
-            controller:'fmathcontroller'
+            controller: 'fmathcontroller'
         })
         .when('/facultylanguages', {
             templateUrl: 'faculty.html',
@@ -47,11 +47,8 @@ app.config(['$routeProvider', function ($routeProvider) {
         .when('/sitemap', {
             templateUrl: 'sitemap.html',
             controller: 'sitemapcontroller'
-        });
-    //.otherwise({ redirectTo: '/' })
-    //faculty.html#commerce
-    //faculty.html#mathematics
-    //faculty.html#languages
+        })
+        .otherwise({ redirectTo: '/' });
 }]);
 
 //app.controller('testcontroller', function ($scope) {
